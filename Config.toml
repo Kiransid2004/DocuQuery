@@ -1,0 +1,54 @@
+[project]
+# Shown in browser tab and header
+name = "DocuQuery"
+
+# Enable telemetry = false for production (no data sent to Chainlit cloud)
+enable_telemetry = false
+
+# User session timeout in seconds (1 hour)
+session_timeout = 3600
+
+# Allow users to upload files via the UI
+[features]
+prompt_playground = false    # hide internal prompt playground from users
+multi_modal       = true     # enable file uploads
+
+[features.spontaneous_file_upload]
+enabled    = true
+accept     = ["application/pdf", "text/plain", "text/markdown",
+              "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+              "application/vnd.openxmlformats-officedocument.presentationml.presentation"]
+max_files  = 10
+max_size_mb = 50
+
+[UI]
+# Professional branding
+name        = "DocuQuery"
+description = "RAG-powered document Q&A with hybrid search and source citations"
+
+# FIX (B/C): custom JS/CSS for auto-scroll during streaming + typing cursor.
+# Files live in /public/ (Chainlit auto-serves this directory at /public/*).
+custom_js  = "/public/custom.js"
+custom_css = "/public/custom.css"
+
+# Use a clean dark theme
+default_theme = "dark"
+
+# Collapse the sidebar by default for a cleaner first impression
+default_collapse_content = true
+
+# Hide Chainlit watermark
+hide_cot = true
+
+[UI.theme]
+# Primary brand colour — deep teal
+primary    = "#0EA5E9"
+background = "#0F172A"    # slate-900
+paper      = "#1E293B"    # slate-800
+
+# Fonts — Inter for UI, JetBrains Mono for code blocks
+font_family         = "Inter, system-ui, sans-serif"
+code_font_family    = "JetBrains Mono, monospace"
+
+[meta]
+generated_by = "DocuQuery v4.1"
