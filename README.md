@@ -1,4 +1,4 @@
-Docu Query 
+# DocuQuery 
 
 **Production-grade Retrieval-Augmented Generation (RAG) system for document Q&A** — built as a portfolio project demonstrating end-to-end ML engineering: hybrid search, agentic orchestration, security hardening, and observability.
 
