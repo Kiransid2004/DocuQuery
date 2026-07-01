@@ -14,5 +14,4 @@ RUN mkdir -p data data/images
 EXPOSE 7860
 ENV PORT=7860
 
-
 CMD uvicorn main:app --host 0.0.0.0 --port ${PORT:-7860}
